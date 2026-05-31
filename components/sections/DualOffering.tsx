@@ -1,14 +1,11 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
-import { Bed, Truck, Check, ArrowUpRight } from "lucide-react";
-import { BlurFade } from "@/components/magicui/blur-fade";
-import { cn } from "@/lib/utils";
+import { motion } from "motion/react";
+import { Check, ArrowUpRight } from "lucide-react";
 
 const offerings = [
   {
     id: "hoteleria",
-    icon: Bed,
     image: "/images/hoteleria-banner.png",
     eyebrow: "Hotelería corporativa",
     title: "Camas, casino, lavandería. Operación 24/7.",
@@ -24,7 +21,6 @@ const offerings = [
   },
   {
     id: "equipos",
-    icon: Truck,
     image: "/images/equipos-banner.png",
     eyebrow: "Arriendo de equipos",
     title: "Equipos autónomos y eléctricos listos para faena.",
@@ -41,108 +37,97 @@ const offerings = [
 ];
 
 export function DualOffering() {
-  const [active, setActive] = useState<string | null>(null);
-
   return (
-    <section id="servicios" className="relative py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-4 md:px-8">
-        <BlurFade>
-          <div className="mb-16 max-w-2xl">
-            <div className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-copper)]">
-              02 — Servicios
-            </div>
-            <h2 className="font-display text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
-              Dos líneas de negocio. Una sola{" "}
-              <span className="text-gradient-copper">cadena operativa.</span>
-            </h2>
-            <p className="mt-6 max-w-xl text-lg text-[var(--color-fg-secondary)]">
-              Hotelería y equipos coordinados desde Calama, con SLA por escrito y un
-              equipo que conoce el terreno del norte.
-            </p>
+    <section id="servicios" className="relative">
+      {/* Section header */}
+      <div className="mx-auto max-w-7xl px-4 py-20 md:px-8 md:py-28">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
+          viewport={{ once: true, margin: "-80px" }}
+          className="max-w-2xl"
+        >
+          <div className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-copper)]">
+            02 — Servicios
           </div>
-        </BlurFade>
+          <h2 className="font-display text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
+            Dos líneas de negocio. Una sola{" "}
+            <span className="text-gradient-copper">cadena operativa.</span>
+          </h2>
+          <p className="mt-6 max-w-xl text-lg text-[var(--color-fg-secondary)]">
+            Hotelería y equipos coordinados desde Calama, con SLA por escrito y un
+            equipo que conoce el terreno del norte.
+          </p>
+        </motion.div>
+      </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
-          {offerings.map((o, i) => {
-            const Icon = o.icon;
-            const isActive = active === o.id;
-            return (
-              <BlurFade key={o.id} delay={0.15 + i * 0.1}>
-                <div
-                  onMouseEnter={() => setActive(o.id)}
-                  onMouseLeave={() => setActive(null)}
-                  className={cn(
-                    "group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-[var(--color-bg-surface)] p-8 transition-all duration-500 md:p-10",
-                    isActive
-                      ? "border-[var(--color-copper)]/60 bg-[var(--color-bg-elevated)]"
-                      : "border-[var(--color-border-subtle)]"
-                  )}
-                >
-                  {/* photo backdrop */}
-                  <div aria-hidden className="pointer-events-none absolute inset-0">
-                    <Image
-                      src={o.image}
-                      alt=""
-                      fill
-                      sizes="(min-width: 768px) 50vw, 100vw"
-                      className={cn(
-                        "object-cover transition-all duration-700",
-                        isActive
-                          ? "scale-[1.04] brightness-[0.5] saturate-[0.9]"
-                          : "scale-100 brightness-[0.35] saturate-[0.7]"
-                      )}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-surface)] via-[var(--color-bg-surface)]/85 to-[var(--color-bg-surface)]/55" />
-                  </div>
-                  {/* aurora wash */}
-                  <div
-                    className={cn(
-                      "pointer-events-none absolute inset-0 transition-opacity duration-700",
-                      isActive ? "opacity-100" : "opacity-40"
-                    )}
-                    style={{
-                      background:
-                        "radial-gradient(ellipse 80% 40% at 70% 0%, rgba(30,110,148,0.12), transparent)",
+      {/* Full-bleed cinematic panels */}
+      <div className="grid md:grid-cols-2">
+        {offerings.map((o, i) => (
+          <motion.div
+            key={o.id}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: i * 0.1, ease: [0.32, 0.72, 0, 1] }}
+            viewport={{ once: true, margin: "-80px" }}
+            className="group relative min-h-[70vh] overflow-hidden"
+          >
+            {/* Full-cover image */}
+            <Image
+              src={o.image}
+              alt={o.eyebrow}
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              priority={false}
+              className="object-cover object-center brightness-[0.7] transition-all duration-700 ease-out group-hover:brightness-[0.85] group-hover:scale-[1.03]"
+            />
+
+            {/* Gradient overlay from bottom */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+
+            {/* Content overlay */}
+            <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
+              <span className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-white/60">
+                {o.eyebrow}
+              </span>
+              <h3 className="font-display text-3xl font-black leading-[1.1] tracking-tight text-white md:text-4xl">
+                {o.title}
+              </h3>
+
+              <ul className="mt-6 space-y-2">
+                {o.bullets.map((b, bi) => (
+                  <motion.li
+                    key={b}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.2 + bi * 0.06,
+                      ease: [0.32, 0.72, 0, 1],
                     }}
-                  />
-
-                  <div className="relative flex items-center gap-3">
-                    <div className="grid h-12 w-12 place-items-center rounded-lg border border-[var(--color-border-default)] bg-[var(--color-bg-elevated)]">
-                      <Icon className="h-5 w-5 text-[var(--color-brand-primary)]" strokeWidth={1.5} />
-                    </div>
-                    <span className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-fg-muted)]">
-                      {o.eyebrow}
-                    </span>
-                  </div>
-
-                  <h3 className="relative mt-6 font-display text-3xl font-black leading-[1.1] tracking-tight md:text-4xl">
-                    {o.title}
-                  </h3>
-
-                  <ul className="relative mt-8 space-y-3">
-                    {o.bullets.map((b) => (
-                      <li key={b} className="flex items-start gap-3 text-[var(--color-fg-secondary)]">
-                        <Check
-                          className="mt-1 h-4 w-4 shrink-0 text-[var(--color-brand-success)]"
-                          strokeWidth={2}
-                        />
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <a
-                    href={o.href}
-                    className="relative mt-10 inline-flex items-center gap-2 text-sm font-medium text-[var(--color-copper)] hover:text-[var(--color-copper-hover)]"
+                    viewport={{ once: true, margin: "-80px" }}
+                    className="flex items-start gap-3 text-white/80"
                   >
-                    {o.cta}
-                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </a>
-                </div>
-              </BlurFade>
-            );
-          })}
-        </div>
+                    <Check
+                      className="mt-0.5 h-4 w-4 shrink-0 text-[var(--color-brand-success)]"
+                      strokeWidth={2}
+                    />
+                    <span className="text-sm leading-relaxed">{b}</span>
+                  </motion.li>
+                ))}
+              </ul>
+
+              <a
+                href={o.href}
+                className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
+              >
+                {o.cta}
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

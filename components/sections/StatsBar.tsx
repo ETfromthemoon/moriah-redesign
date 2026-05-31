@@ -1,5 +1,7 @@
+"use client";
+import Image from "next/image";
+import { motion } from "motion/react";
 import { NumberTicker } from "@/components/magicui/number-ticker";
-import { BlurFade } from "@/components/magicui/blur-fade";
 
 const stats = [
   { value: 18, suffix: "+", label: "Años en terreno" },
@@ -10,23 +12,42 @@ const stats = [
 
 export function StatsBar() {
   return (
-    <section className="border-y border-[var(--color-border-subtle)] bg-[var(--color-bg-surface)]">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px bg-[var(--color-border-subtle)] md:grid-cols-4">
+    <section className="relative overflow-hidden">
+      {/* Background image: open pit mine */}
+      <div aria-hidden className="absolute inset-0 -z-10">
+        <Image
+          src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&q=80&auto=format&fit=crop"
+          alt=""
+          fill
+          sizes="100vw"
+          priority={false}
+          className="object-cover object-center brightness-[0.35] saturate-[0.7]"
+        />
+        {/* Overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0E1A1F]/80 via-[#0E1A1F]/60 to-[#0E1A1F]/80" />
+      </div>
+
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px bg-white/5 md:grid-cols-4">
         {stats.map((s, i) => (
-          <BlurFade key={s.label} delay={i * 0.1}>
-            <div className="bg-[var(--color-bg-surface)] px-6 py-10 md:py-14">
-              <div className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--color-fg-muted)]">
-                {String(i + 1).padStart(2, "0")} / {stats.length}
-              </div>
-              <div className="mt-3 flex items-baseline gap-1 font-display text-5xl font-black tracking-tight text-[var(--color-brand-primary)] md:text-6xl">
-                <NumberTicker value={s.value} />
-                <span>{s.suffix}</span>
-              </div>
-              <p className="mt-2 text-sm text-[var(--color-fg-secondary)] md:text-base">
-                {s.label}
-              </p>
+          <motion.div
+            key={s.label}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: i * 0.1, ease: [0.32, 0.72, 0, 1] }}
+            viewport={{ once: true, margin: "-80px" }}
+            className="px-6 py-12 md:py-16"
+          >
+            <div className="font-mono text-xs uppercase tracking-[0.18em] text-white/50">
+              {String(i + 1).padStart(2, "0")} / {stats.length}
             </div>
-          </BlurFade>
+            <div className="mt-3 flex items-baseline gap-1 font-display text-5xl font-black tracking-tight text-white md:text-6xl">
+              <NumberTicker value={s.value} />
+              <span className="text-[var(--color-brand-primary)]">{s.suffix}</span>
+            </div>
+            <p className="mt-2 text-sm text-white/65 md:text-base">
+              {s.label}
+            </p>
+          </motion.div>
         ))}
       </div>
     </section>

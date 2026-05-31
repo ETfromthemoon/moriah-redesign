@@ -1,7 +1,7 @@
 "use client";
 import { useRef } from "react";
-import { motion, useMotionValue, useSpring } from "motion/react";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { motion, useScroll, useTransform, useMotionValue, useSpring } from "motion/react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Marquee } from "@/components/magicui/marquee";
 
@@ -59,35 +59,51 @@ function MagneticCTA({
 }
 
 export function Hero() {
-  const ref = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLElement>(null);
+  const mouseRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+
+  // Parallax: image moves slower than scroll
+  const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+  // Hero content fades out as user scrolls
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   const onMouseMove = (e: React.MouseEvent) => {
-    if (!ref.current) return;
-    const r = ref.current.getBoundingClientRect();
+    if (!mouseRef.current) return;
+    const r = mouseRef.current.getBoundingClientRect();
     const x = ((e.clientX - r.left) / r.width) * 100;
     const y = ((e.clientY - r.top) / r.height) * 100;
-    ref.current.style.setProperty("--mx", `${x}%`);
-    ref.current.style.setProperty("--my", `${y}%`);
+    mouseRef.current.style.setProperty("--mx", `${x}%`);
+    mouseRef.current.style.setProperty("--my", `${y}%`);
   };
 
   return (
     <section
       id="top"
-      ref={ref}
+      ref={heroRef}
       onMouseMove={onMouseMove}
       className="relative isolate min-h-[100vh] overflow-hidden bg-[#0E1A1F] pt-28 text-white md:pt-32"
     >
-      {/* Background photo */}
-      <div aria-hidden className="absolute inset-0 -z-20">
+      {/* Background photo with parallax + Ken Burns */}
+      <motion.div
+        aria-hidden
+        style={{ y: imgY }}
+        className="absolute inset-0 -z-20 scale-110"
+      >
         <Image
           src="/images/hero-main.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center scale-105 saturate-[0.85] brightness-[0.55]"
+          className="object-cover object-center animate-ken-burns saturate-[0.85] brightness-[0.55]"
         />
-      </div>
+      </motion.div>
+
       {/* Dark overlay for legibility */}
       <div
         aria-hidden
@@ -100,6 +116,7 @@ export function Hero() {
       />
       {/* Mouse spotlight */}
       <div
+        ref={mouseRef}
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 opacity-80 transition-opacity duration-500"
         style={{
@@ -116,13 +133,17 @@ export function Hero() {
             "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
         }}
       />
-      {/* Bottom gradient fade — Hero dark → site claro (transición suave) */}
+      {/* Bottom gradient fade */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-b from-transparent via-[#0E1A1F] to-[var(--color-bg-base)]"
       />
 
-      <div className="mx-auto max-w-7xl px-4 md:px-8">
+      {/* Hero content that fades as user scrolls */}
+      <motion.div
+        style={{ opacity: heroOpacity }}
+        className="mx-auto max-w-7xl px-4 md:px-8"
+      >
         {/* eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -227,16 +248,27 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* Scroll indicator */}
+        {/* Animated mouse scroll hint */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.6 }}
           className="mt-12 flex items-center justify-center pb-8 md:mt-16"
         >
-          <ChevronDown className="h-5 w-5 animate-bounce text-white/55" />
+          <div className="flex flex-col items-center gap-2">
+            {/* Mouse icon with scrolling line inside */}
+            <div className="relative h-9 w-5 rounded-full border-2 border-white/40 flex items-start justify-center pt-1.5">
+              <div
+                className="h-2.5 w-0.5 rounded-full bg-white/70"
+                style={{ animation: "mouse-scroll 1.2s ease-in-out infinite" }}
+              />
+            </div>
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">
+              scroll
+            </span>
+          </div>
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 }

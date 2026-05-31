@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { StatsBar } from "@/components/sections/StatsBar";
 import { DualOffering } from "@/components/sections/DualOffering";
 import { Galeria } from "@/components/sections/Galeria";
+import { ParallaxDivider } from "@/components/sections/ParallaxDivider";
 import { Metodo } from "@/components/sections/Metodo";
 import { Casos } from "@/components/sections/Casos";
 import { Testimoniales } from "@/components/sections/Testimoniales";
@@ -21,6 +22,7 @@ export default function HomePage() {
       <StatsBar />
       <DualOffering />
       <Galeria />
+      <ParallaxDivider />
       <Metodo />
       <Casos />
       <Testimoniales />
