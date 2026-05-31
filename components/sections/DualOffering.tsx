@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import { Bed, Truck, Check, ArrowUpRight } from "lucide-react";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { cn } from "@/lib/utils";
@@ -8,6 +9,7 @@ const offerings = [
   {
     id: "hoteleria",
     icon: Bed,
+    image: "/images/hoteleria-banner.png",
     eyebrow: "Hotelería corporativa",
     title: "Camas, casino, lavandería. Operación 24/7.",
     bullets: [
@@ -23,6 +25,7 @@ const offerings = [
   {
     id: "equipos",
     icon: Truck,
+    image: "/images/equipos-banner.png",
     eyebrow: "Arriendo de equipos",
     title: "Equipos autónomos y eléctricos listos para faena.",
     bullets: [
@@ -75,6 +78,22 @@ export function DualOffering() {
                       : "border-[var(--color-border-subtle)]"
                   )}
                 >
+                  {/* photo backdrop */}
+                  <div aria-hidden className="pointer-events-none absolute inset-0">
+                    <Image
+                      src={o.image}
+                      alt=""
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      className={cn(
+                        "object-cover transition-all duration-700",
+                        isActive
+                          ? "scale-[1.04] brightness-[0.5] saturate-[0.9]"
+                          : "scale-100 brightness-[0.35] saturate-[0.7]"
+                      )}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-surface)] via-[var(--color-bg-surface)]/85 to-[var(--color-bg-surface)]/55" />
+                  </div>
                   {/* aurora wash */}
                   <div
                     className={cn(
@@ -83,7 +102,7 @@ export function DualOffering() {
                     )}
                     style={{
                       background:
-                        "radial-gradient(ellipse 80% 40% at 70% 0%, rgba(193,99,45,0.10), transparent)",
+                        "radial-gradient(ellipse 80% 40% at 70% 0%, rgba(193,99,45,0.18), transparent)",
                     }}
                   />
 

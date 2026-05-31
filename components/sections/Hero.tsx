@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring } from "motion/react";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import Image from "next/image";
 import { Marquee } from "@/components/magicui/marquee";
 
 const headlineWords = ["Operamos", "donde", "Chile", "produce."];
@@ -76,6 +77,22 @@ export function Hero() {
       onMouseMove={onMouseMove}
       className="relative isolate min-h-[100vh] overflow-hidden pt-28 md:pt-32"
     >
+      {/* Background photo */}
+      <div aria-hidden className="absolute inset-0 -z-20">
+        <Image
+          src="/images/hero-main.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center scale-105 saturate-[0.85] brightness-[0.55]"
+        />
+      </div>
+      {/* Dark overlay for legibility */}
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-[var(--color-bg-base)]/70 via-[var(--color-bg-base)]/75 to-[var(--color-bg-base)]"
+      />
       {/* Aurora background */}
       <div
         aria-hidden

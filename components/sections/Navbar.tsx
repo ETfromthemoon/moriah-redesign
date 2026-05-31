@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -34,9 +35,14 @@ export function Navbar() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
         <Link href="#top" className="flex items-center gap-2">
-          <span className="font-display text-2xl tracking-tight">
-            Moriah<span className="text-[var(--color-copper)]">.</span>
-          </span>
+          <Image
+            src="/images/logo.png"
+            alt="Moriah"
+            width={140}
+            height={36}
+            priority
+            className="h-9 w-auto object-contain"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
