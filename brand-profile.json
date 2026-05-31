@@ -1,0 +1,181 @@
+{
+  "brand": {
+    "name": "Moriah SPA",
+    "tagline_actual": "Brindamos un servicio personalizado",
+    "tagline_propuesto": "Operamos donde Chile produce.",
+    "tagline_alt_1": "Hospedaje y equipos para la operación minera del norte.",
+    "tagline_alt_2": "La base logística de tu proyecto en Calama.",
+    "industry": "B2B Industrial Services — Mining lodging & equipment rental",
+    "location": "Calama, Antofagasta, Chile",
+    "language": "es-CL",
+    "founded_context": "Empresa familiar/local con operación consolidada en el norte minero"
+  },
+  "positioning": {
+    "category": "Servicios logísticos integrales para minería e industria pesada",
+    "promise": "Logística de hospedaje y equipos resuelta para que la operación nunca pare",
+    "differentiator": "Conocimiento del terreno del norte + flota propia + capacidad de respuesta inmediata",
+    "audience_primary": "Gerentes de proyectos en mineras, constructoras industriales, contratistas EPC",
+    "audience_secondary": "Encargados de servicios generales, jefes de campamento, compras corporativas",
+    "psychographics": [
+      "Operan con presión de plazos y SLA estrictos",
+      "Valoran proveedores que entienden la lógica de turnos y faena",
+      "Buscan reducir riesgo operativo, no solo precio",
+      "Necesitan facturación corporativa, OC, contratos marco"
+    ]
+  },
+  "voice": {
+    "personality": ["Sólido", "Operativo", "Sin adornos", "Profesional norteño"],
+    "tone": "Directo, técnico, con orgullo del trabajo en terreno. Cero corporate fluff.",
+    "do": [
+      "Hablar de turnos, faenas, cuadrillas, jornadas",
+      "Mencionar cifras concretas: camas, equipos, años, kilómetros",
+      "Usar lenguaje de la industria minera sin sobreexplicar",
+      "Mostrar evidencia: nombres de proyectos, cargos de testimoniales"
+    ],
+    "dont": [
+      "Decir transformar, potenciar, soluciones integrales, sinergia",
+      "Promesas vagas sin números",
+      "Lenguaje hotelero turístico (esto no es Booking)",
+      "Stock photos genéricas tipo handshake corporativo"
+    ]
+  },
+  "visual_direction": {
+    "mood": "Industrial premium oscuro con calor cobre",
+    "references": [
+      "Patagonia Provisions (rugged premium)",
+      "Lemaire (editorial restraint)",
+      "Codelco Annual Reports (industrial documentary)",
+      "Bottega Veneta (luxury con peso)"
+    ],
+    "imagery_style": [
+      "Cinemática del desierto de Atacama (cielos, dunas, polvo)",
+      "Documentary del campamento (cocina, dormitorio, comedor, trabajadores reales)",
+      "Equipos en faena (grano, contraste, sin retouch excesivo)",
+      "Detalles texturales: cobre oxidado, acero, tela técnica, sal de salar"
+    ],
+    "avoid_imagery": [
+      "Stock corporativo gente sonriendo a laptop",
+      "Renders 3D genéricos",
+      "Iconos lineales tipo material design",
+      "Gradientes morados/azules SaaS"
+    ]
+  },
+  "color_palette": {
+    "primary_bg": {
+      "hex": "#0A0A0A",
+      "name": "Antracita",
+      "usage": "Fondo principal, secciones hero"
+    },
+    "surface": {
+      "hex": "#141414",
+      "name": "Carbón",
+      "usage": "Cards, surfaces elevadas"
+    },
+    "surface_elevated": {
+      "hex": "#1F1F1F",
+      "name": "Pizarra",
+      "usage": "Modales, dropdowns, hover states"
+    },
+    "accent_primary": {
+      "hex": "#C1632D",
+      "name": "Cobre Calama",
+      "usage": "CTAs, hovers, highlights, marker text"
+    },
+    "accent_secondary": {
+      "hex": "#E8B873",
+      "name": "Oro Atacama",
+      "usage": "Stats numbers, accent text, hover glow"
+    },
+    "text_primary": {
+      "hex": "#F5F1EA",
+      "name": "Sal del salar",
+      "usage": "Body text sobre dark"
+    },
+    "text_secondary": {
+      "hex": "#A8A29E",
+      "name": "Polvo",
+      "usage": "Captions, metadata"
+    },
+    "text_muted": {
+      "hex": "#6B6660",
+      "name": "Niebla",
+      "usage": "Disabled, low priority"
+    },
+    "border": {
+      "hex": "#2A2A2A",
+      "name": "Hierro",
+      "usage": "Divisiones, bordes sutiles"
+    },
+    "success": {
+      "hex": "#4A7C59",
+      "name": "Verde faena",
+      "usage": "Confirmaciones, available"
+    }
+  },
+  "typography": {
+    "display": {
+      "family": "Fraunces",
+      "fallback": "Georgia, serif",
+      "weights": [400, 600, 900],
+      "usage": "Headlines, hero, section titles",
+      "rationale": "Serif moderna con soft details — combina autoridad editorial con calidez. Variable axis SOFT/WONK le dan personalidad sin volverse decorativa."
+    },
+    "body": {
+      "family": "Inter Tight",
+      "fallback": "system-ui, sans-serif",
+      "weights": [400, 500, 600],
+      "usage": "Body, UI, navigation, forms",
+      "rationale": "Inter Tight es más condensada y técnica que Inter regular — encaja con el tono operativo industrial."
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "fallback": "monospace",
+      "weights": [400, 500],
+      "usage": "Stats numbers, metadata, technical specs"
+    },
+    "scale": {
+      "ratio": 1.333,
+      "base": "16px",
+      "sizes": {
+        "xs": "0.75rem",
+        "sm": "0.875rem",
+        "base": "1rem",
+        "lg": "1.125rem",
+        "xl": "1.5rem",
+        "2xl": "2rem",
+        "3xl": "2.75rem",
+        "4xl": "3.75rem",
+        "5xl": "5rem",
+        "6xl": "6.5rem",
+        "display": "clamp(3.5rem, 8vw, 8rem)"
+      }
+    }
+  },
+  "motion": {
+    "principles": [
+      "Layout-stable desde frame 1",
+      "Blur-to-focus para headlines (no left-to-right)",
+      "Mouse-follow spotlight sutil en hero",
+      "Magnetic CTAs",
+      "Reveal on scroll con stagger natural (no robotic)",
+      "Aurora gradient lento en background"
+    ],
+    "easing": {
+      "default": "cubic-bezier(0.32, 0.72, 0, 1)",
+      "smooth": "cubic-bezier(0.65, 0, 0.35, 1)",
+      "snappy": "cubic-bezier(0.5, 1.5, 0.5, 1)"
+    },
+    "durations": {
+      "instant": "100ms",
+      "fast": "200ms",
+      "base": "400ms",
+      "slow": "800ms",
+      "reveal": "1200ms"
+    }
+  },
+  "iconography": {
+    "library": "lucide-react",
+    "style": "stroke 1.5, sin fill",
+    "size_default": "20px"
+  }
+}

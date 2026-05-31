@@ -1,0 +1,101 @@
+"use client";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { Menu, X, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+const links = [
+  { href: "#servicios", label: "Servicios" },
+  { href: "#casos", label: "Casos" },
+  { href: "#metodo", label: "Método" },
+  { href: "#contacto", label: "Contacto" },
+];
+
+export function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 32);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <header
+      className={cn(
+        "fixed top-0 z-50 w-full transition-all duration-500",
+        scrolled
+          ? "border-b border-[var(--color-border-subtle)] bg-[var(--color-bg-base)]/70 backdrop-blur-xl"
+          : "border-b border-transparent bg-transparent"
+      )}
+    >
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
+        <Link href="#top" className="flex items-center gap-2">
+          <span className="font-display text-2xl tracking-tight">
+            Moriah<span className="text-[var(--color-copper)]">.</span>
+          </span>
+        </Link>
+
+        <nav className="hidden items-center gap-8 md:flex">
+          {links.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="text-sm text-[var(--color-fg-secondary)] hover:text-[var(--color-fg-primary)] transition-colors"
+            >
+              {l.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="hidden items-center gap-3 md:flex">
+          <a
+            href="https://wa.me/56995412163"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            className="grid h-10 w-10 place-items-center rounded-full border border-[var(--color-border-default)] text-[var(--color-fg-secondary)] hover:border-[var(--color-copper)] hover:text-[var(--color-copper-hover)] transition-colors"
+          >
+            <MessageCircle className="h-4 w-4" />
+          </a>
+          <Button asChild>
+            <a href="#contacto">Solicitar cotización</a>
+          </Button>
+        </div>
+
+        <button
+          onClick={() => setOpen((o) => !o)}
+          className="grid h-10 w-10 place-items-center rounded-md border border-[var(--color-border-default)] md:hidden"
+          aria-label="Menú"
+        >
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </div>
+
+      {open && (
+        <div className="border-t border-[var(--color-border-subtle)] bg-[var(--color-bg-base)]/95 backdrop-blur-xl md:hidden">
+          <div className="flex flex-col gap-1 p-4">
+            {links.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="rounded-md px-3 py-3 text-base text-[var(--color-fg-primary)] hover:bg-[var(--color-bg-surface)]"
+              >
+                {l.label}
+              </a>
+            ))}
+            <Button asChild className="mt-3 w-full">
+              <a href="#contacto" onClick={() => setOpen(false)}>
+                Solicitar cotización
+              </a>
+            </Button>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}
