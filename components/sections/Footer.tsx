@@ -80,7 +80,7 @@ export function Footer() {
 
           {cols.map((c) => (
             <div key={c.title}>
-              <div className="font-mono text-xs uppercase tracking-[0.18em] text-white/50">
+              <div className="font-mono text-xs uppercase tracking-[0.18em] text-white/70">
                 {c.title}
               </div>
               <ul className="mt-5 space-y-3">
@@ -99,7 +99,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/50 md:flex-row md:items-center">
+        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/20 pt-8 text-xs text-white/70 md:flex-row md:items-center">
           <div>© {new Date().getFullYear()} Moriah SPA · Calama, Chile.</div>
           <div className="font-mono uppercase tracking-wider">
             Operación 24/7 · Norte de Chile

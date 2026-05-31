@@ -60,7 +60,7 @@ export function CTAFinal() {
                     <MessageCircle className="h-4 w-4" strokeWidth={1.5} />
                   </span>
                   <div>
-                    <div className="text-xs uppercase tracking-wider text-white/55">
+                    <div className="text-xs uppercase tracking-wider text-white/70">
                       WhatsApp directo
                     </div>
                     <div className="font-mono">+56 9 9541 2163</div>
@@ -76,7 +76,7 @@ export function CTAFinal() {
                     <Phone className="h-4 w-4" strokeWidth={1.5} />
                   </span>
                   <div>
-                    <div className="text-xs uppercase tracking-wider text-white/55">
+                    <div className="text-xs uppercase tracking-wider text-white/70">
                       Llamar ahora
                     </div>
                     <div className="font-mono">+56 9 9541 2163</div>
@@ -92,7 +92,7 @@ export function CTAFinal() {
                     <Mail className="h-4 w-4" strokeWidth={1.5} />
                   </span>
                   <div>
-                    <div className="text-xs uppercase tracking-wider text-white/55">
+                    <div className="text-xs uppercase tracking-wider text-white/70">
                       Email corporativo
                     </div>
                     <div>contacto@moriah.cl</div>
@@ -110,7 +110,7 @@ export function CTAFinal() {
                     <MapPin className="h-4 w-4" strokeWidth={1.5} />
                   </span>
                   <div>
-                    <div className="text-xs uppercase tracking-wider text-white/55">
+                    <div className="text-xs uppercase tracking-wider text-white/70">
                       Oficina
                     </div>
                     <div>Calama, Región de Antofagasta</div>

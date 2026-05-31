@@ -37,7 +37,7 @@ export function StatsBar() {
             viewport={{ once: true, margin: "-80px" }}
             className="px-6 py-12 md:py-16"
           >
-            <div className="font-mono text-xs uppercase tracking-[0.18em] text-white/50">
+            <div className="font-mono text-xs uppercase tracking-[0.18em] text-white/75">
               {String(i + 1).padStart(2, "0")} / {stats.length}
             </div>
             <div className="mt-3 flex items-baseline gap-1 font-display text-5xl font-extrabold tracking-tight text-white md:text-6xl">

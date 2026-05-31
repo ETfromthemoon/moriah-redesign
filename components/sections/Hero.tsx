@@ -229,7 +229,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 1.3 }}
           className="mt-20 md:mt-28"
         >
-          <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-white/55">
+          <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-white/75">
             Operamos para mineras y EPC del norte
           </p>
           <div className="relative">
@@ -237,7 +237,7 @@ export function Hero() {
               {trustLogos.map((l) => (
                 <span
                   key={l}
-                  className="font-display text-xl md:text-2xl text-white/45 grayscale hover:text-white/80 transition-colors"
+                  className="font-display text-xl md:text-2xl text-white/65 grayscale hover:text-white/80 transition-colors"
                 >
                   {l}
                 </span>
@@ -257,13 +257,13 @@ export function Hero() {
         >
           <div className="flex flex-col items-center gap-2">
             {/* Mouse icon with scrolling line inside */}
-            <div className="relative h-9 w-5 rounded-full border-2 border-white/40 flex items-start justify-center pt-1.5">
+            <div className="relative h-9 w-5 rounded-full border-2 border-white/60 flex items-start justify-center pt-1.5">
               <div
                 className="h-2.5 w-0.5 rounded-full bg-white/70"
                 style={{ animation: "mouse-scroll 1.2s ease-in-out infinite" }}
               />
             </div>
-            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/60">
               scroll
             </span>
           </div>

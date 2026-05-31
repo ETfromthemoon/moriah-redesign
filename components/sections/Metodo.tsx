@@ -101,7 +101,7 @@ export function Metodo() {
                     {s.n}
                   </span>
                   <Icon
-                    className="h-6 w-6 text-white/40 transition-colors group-hover:text-white/70"
+                    className="h-6 w-6 text-white/65 transition-colors group-hover:text-white/90"
                     strokeWidth={1.5}
                   />
                 </div>

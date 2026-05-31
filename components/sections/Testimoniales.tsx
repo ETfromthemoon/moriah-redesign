@@ -100,7 +100,7 @@ export function Testimoniales() {
                 <div className="mt-1 text-sm text-white/60">
                   {t.role}
                 </div>
-                <div className="text-sm text-white/40">{t.company}</div>
+                <div className="text-sm text-white/70">{t.company}</div>
               </figcaption>
             </motion.figure>
           ))}

@@ -11,7 +11,7 @@
     "fg": {
       "primary": { "value": "#0E1A1F" },
       "secondary": { "value": "#4A5560" },
-      "muted": { "value": "#8A8F94" },
+      "muted": { "value": "#696F77" },
       "inverse": { "value": "#FAFAF6" }
     },
     "brand": {
