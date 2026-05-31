@@ -47,7 +47,7 @@ export function FAQ() {
             <div className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-copper)]">
               06 — Preguntas
             </div>
-            <h2 className="font-display text-4xl font-black leading-[1.05] tracking-tight md:text-5xl">
+            <h2 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
               Lo que preguntan los gerentes antes de cotizar.
             </h2>
           </div>

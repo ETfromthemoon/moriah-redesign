@@ -157,7 +157,7 @@ export function Hero() {
           </span>
         </motion.div>
 
-        <h1 className="font-display text-balance text-[clamp(3rem,8.5vw,8rem)] font-black leading-[0.95] tracking-[-0.04em]">
+        <h1 className="font-display text-balance text-[clamp(3rem,8.5vw,8rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">
           {headlineWords.map((w, i) => (
             <motion.span
               key={i}
@@ -172,7 +172,7 @@ export function Hero() {
             >
               {i === headlineWords.length - 1 ? (
                 <span className="relative inline-block">
-                  <span className="text-gradient-on-dark">{w}</span>
+                  <span className="text-brand-highlight-dark">{w}</span>
                   {/* hand-drawn marker underline */}
                   <svg
                     aria-hidden

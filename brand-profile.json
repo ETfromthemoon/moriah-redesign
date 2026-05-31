@@ -129,11 +129,11 @@
   },
   "typography": {
     "display": {
-      "family": "Fraunces",
+      "family": "Playfair Display",
       "fallback": "Georgia, serif",
-      "weights": [400, 600, 900],
+      "weights": [400, 600, 700, 800],
       "usage": "Headlines, hero, section titles",
-      "rationale": "Serif moderna con soft details — combina autoridad editorial con calidez. Variable axis SOFT/WONK le dan personalidad sin volverse decorativa."
+      "rationale": "Serif clásica de alto contraste — autoridad editorial premium. El italic es excepcionalmente elegante para palabras clave destacadas. Weight 800 como máximo display."
     },
     "body": {
       "family": "Inter Tight",

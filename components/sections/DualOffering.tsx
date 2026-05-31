@@ -51,9 +51,9 @@ export function DualOffering() {
           <div className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-copper)]">
             02 — Servicios
           </div>
-          <h2 className="font-display text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
+          <h2 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
             Dos líneas de negocio. Una sola{" "}
-            <span className="text-gradient-copper">cadena operativa.</span>
+            <span className="text-brand-highlight">cadena operativa.</span>
           </h2>
           <p className="mt-6 max-w-xl text-lg text-[var(--color-fg-secondary)]">
             Hotelería y equipos coordinados desde Calama, con SLA por escrito y un
@@ -91,7 +91,7 @@ export function DualOffering() {
               <span className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-white/60">
                 {o.eyebrow}
               </span>
-              <h3 className="font-display text-3xl font-black leading-[1.1] tracking-tight text-white md:text-4xl">
+              <h3 className="font-display text-3xl font-extrabold leading-[1.1] tracking-tight text-white md:text-4xl">
                 {o.title}
               </h3>
 

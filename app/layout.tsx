@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter_Tight, JetBrains_Mono } from "next/font/google";
+import { Playfair_Display, Inter_Tight, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-playfair",
   display: "swap",
-  axes: ["SOFT", "WONK", "opsz"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
 });
 
 const interTight = Inter_Tight({
@@ -41,7 +42,7 @@ export default function RootLayout({
   return (
     <html
       lang="es-CL"
-      className={`${fraunces.variable} ${interTight.variable} ${jetbrains.variable}`}
+      className={`${playfairDisplay.variable} ${interTight.variable} ${jetbrains.variable}`}
       suppressHydrationWarning
     >
       <body className="bg-[var(--color-bg-base)] text-[var(--color-fg-primary)] antialiased">

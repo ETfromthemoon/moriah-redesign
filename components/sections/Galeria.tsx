@@ -68,10 +68,10 @@ export function Galeria() {
             whileInView={{ clipPath: "inset(0 0% 0 0)" }}
             transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
             viewport={{ once: true, margin: "-80px" }}
-            className="font-display text-4xl font-black leading-[1.05] tracking-tight md:text-6xl"
+            className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl"
           >
             Habitaciones, casino y espacios{" "}
-            <span className="text-gradient-copper">listos para faena.</span>
+            <span className="text-brand-highlight">listos para faena.</span>
           </motion.h2>
           <p className="mt-6 max-w-xl text-lg text-[var(--color-fg-secondary)]">
             Standards corporativos en pleno desierto. Cada módulo pensado para que el

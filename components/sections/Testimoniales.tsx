@@ -72,7 +72,7 @@ export function Testimoniales() {
           <div className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-brand-primary)]">
             05 — Testimonios
           </div>
-          <h2 className="font-display text-4xl font-black leading-[1.05] tracking-tight text-white md:text-6xl">
+          <h2 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl">
             Lo que dicen los que están en faena.
           </h2>
         </motion.div>

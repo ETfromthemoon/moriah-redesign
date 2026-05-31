@@ -37,9 +37,9 @@ export function CTAFinal() {
             <div className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[#5BB3D9]">
               07 — Cotización
             </div>
-            <h2 className="font-display text-4xl font-black leading-[1.02] tracking-tight md:text-6xl">
+            <h2 className="font-display text-4xl font-extrabold leading-[1.02] tracking-tight md:text-6xl">
               Tu próximo proyecto en el norte empieza con{" "}
-              <span className="text-gradient-on-dark">una llamada.</span>
+              <span className="text-brand-highlight-dark">una llamada.</span>
             </h2>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-white/70">
               Cuéntanos qué necesitas. Dimensionamos contigo en 24 horas y te enviamos

@@ -36,7 +36,7 @@
   },
   "font": {
     "family": {
-      "display": { "value": "'Fraunces', Georgia, serif" },
+      "display": { "value": "'Playfair Display', Georgia, serif" },
       "body": { "value": "'Inter Tight', system-ui, sans-serif" },
       "mono": { "value": "'JetBrains Mono', monospace" }
     },

@@ -43,10 +43,10 @@ export function ParallaxDivider() {
           whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.9, ease: [0.32, 0.72, 0, 1] }}
           viewport={{ once: true, margin: "-80px" }}
-          className="font-display text-[clamp(2rem,5vw,4.5rem)] font-black leading-tight tracking-[-0.03em] text-white"
+          className="font-display text-[clamp(2rem,5vw,4.5rem)] font-extrabold leading-tight tracking-[-0.03em] text-white"
         >
           El norte de Chile no para.{" "}
-          <span className="text-gradient-on-dark">Nosotros tampoco.</span>
+          <span className="text-brand-highlight-dark">Nosotros tampoco.</span>
         </motion.p>
       </div>
     </section>

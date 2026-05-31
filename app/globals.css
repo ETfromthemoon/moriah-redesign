@@ -39,7 +39,7 @@
   --color-error: #E03B25;
 
   /* Type */
-  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-display: var(--font-playfair), Georgia, serif;
   --font-sans: var(--font-inter-tight), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
 
@@ -125,7 +125,7 @@ html, body {
   color: #FFFFFF;
 }
 
-.font-display { font-family: var(--font-display); font-feature-settings: "ss01", "ss02"; }
+.font-display { font-family: var(--font-display); }
 .font-mono { font-family: var(--font-mono); }
 
 .text-balance { text-wrap: balance; }
@@ -186,6 +186,16 @@ html, body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmer 6s linear infinite;
+}
+
+/* Highlight corporativo — azul sólido sobre claro */
+.text-brand-highlight {
+  color: var(--color-brand-primary);
+}
+
+/* Highlight corporativo — azul claro sobre dark */
+.text-brand-highlight-dark {
+  color: #7DC4E4;
 }
 
 .scrollbar-hide::-webkit-scrollbar { display: none; }

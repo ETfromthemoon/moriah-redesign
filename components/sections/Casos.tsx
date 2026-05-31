@@ -80,7 +80,7 @@ export function Casos() {
           <div className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-copper)]">
             04 — Casos
           </div>
-          <h2 className="font-display text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
+          <h2 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
             Proyectos donde estuvimos.
           </h2>
           <p className="mt-6 text-lg text-[var(--color-fg-secondary)]">
@@ -131,7 +131,7 @@ export function Casos() {
                     viewport={{ once: true, margin: "-80px" }}
                     className="bg-[var(--color-bg-base)] p-6"
                   >
-                    <div className="font-display text-3xl font-black text-[var(--color-gold)] md:text-4xl">
+                    <div className="font-display text-3xl font-extrabold text-[var(--color-gold)] md:text-4xl">
                       {m.v}
                     </div>
                     <div className="mt-2 text-xs uppercase tracking-wider text-[var(--color-fg-secondary)]">
