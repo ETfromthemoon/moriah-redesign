@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="es-CL"
-      className={`${fraunces.variable} ${interTight.variable} ${jetbrains.variable} dark`}
+      className={`${fraunces.variable} ${interTight.variable} ${jetbrains.variable}`}
       suppressHydrationWarning
     >
       <body className="bg-[var(--color-bg-base)] text-[var(--color-fg-primary)] antialiased">

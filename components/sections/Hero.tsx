@@ -48,8 +48,8 @@ function MagneticCTA({
       style={{ x: sx, y: sy }}
       className={
         primary
-          ? "group inline-flex items-center justify-center gap-2 rounded-md bg-[var(--color-copper)] px-7 py-3.5 text-sm font-medium text-white shadow-[0_0_0_rgba(193,99,45,0)] transition-shadow duration-500 hover:bg-[var(--color-copper-hover)] hover:shadow-[0_0_40px_rgba(193,99,45,0.5)]"
-          : "group inline-flex items-center justify-center gap-2 rounded-md border border-[var(--color-border-default)] px-7 py-3.5 text-sm font-medium text-[var(--color-fg-primary)] transition-colors hover:border-[var(--color-copper)] hover:text-[var(--color-copper-hover)]"
+          ? "group inline-flex items-center justify-center gap-2 rounded-md bg-[var(--color-brand-primary)] px-7 py-3.5 text-sm font-medium text-white shadow-[0_0_0_rgba(30,110,148,0)] transition-shadow duration-500 hover:bg-[var(--color-brand-primary-hover)] hover:shadow-[0_0_40px_rgba(30,110,148,0.45)]"
+          : "group inline-flex items-center justify-center gap-2 rounded-md border border-white/30 px-7 py-3.5 text-sm font-medium text-white transition-colors hover:border-white hover:bg-white/5"
       }
     >
       {children}
@@ -75,7 +75,7 @@ export function Hero() {
       id="top"
       ref={ref}
       onMouseMove={onMouseMove}
-      className="relative isolate min-h-[100vh] overflow-hidden pt-28 md:pt-32"
+      className="relative isolate min-h-[100vh] overflow-hidden bg-[#0E1A1F] pt-28 text-white md:pt-32"
     >
       {/* Background photo */}
       <div aria-hidden className="absolute inset-0 -z-20">
@@ -91,7 +91,7 @@ export function Hero() {
       {/* Dark overlay for legibility */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-b from-[var(--color-bg-base)]/70 via-[var(--color-bg-base)]/75 to-[var(--color-bg-base)]"
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0E1A1F]/70 via-[#0E1A1F]/80 to-[#0E1A1F]"
       />
       {/* Aurora background */}
       <div
@@ -104,7 +104,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10 opacity-80 transition-opacity duration-500"
         style={{
           background:
-            "radial-gradient(600px circle at var(--mx, 50%) var(--my, 30%), rgba(193,99,45,0.18), transparent 55%)",
+            "radial-gradient(600px circle at var(--mx, 50%) var(--my, 30%), rgba(30,110,148,0.28), transparent 55%)",
         }}
       />
       {/* Grain texture overlay */}
@@ -116,10 +116,10 @@ export function Hero() {
             "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
         }}
       />
-      {/* Bottom gradient fade */}
+      {/* Bottom gradient fade — Hero dark → site claro (transición suave) */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-b from-transparent to-[var(--color-bg-base)]"
+        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-b from-transparent via-[#0E1A1F] to-[var(--color-bg-base)]"
       />
 
       <div className="mx-auto max-w-7xl px-4 md:px-8">
@@ -128,10 +128,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-8 inline-flex items-center gap-2 rounded-full border border-[var(--color-border-default)] bg-[var(--color-bg-surface)]/50 px-4 py-1.5 backdrop-blur"
+          className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 backdrop-blur"
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-success)] animate-pulse" />
-          <span className="font-mono text-xs uppercase tracking-wider text-[var(--color-fg-secondary)]">
+          <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-brand-success)] animate-pulse" />
+          <span className="font-mono text-xs uppercase tracking-wider text-white/80">
             Calama · Antofagasta · Atacama
           </span>
         </motion.div>
@@ -151,7 +151,7 @@ export function Hero() {
             >
               {i === headlineWords.length - 1 ? (
                 <span className="relative inline-block">
-                  <span className="text-gradient-copper">{w}</span>
+                  <span className="text-gradient-on-dark">{w}</span>
                   {/* hand-drawn marker underline */}
                   <svg
                     aria-hidden
@@ -161,7 +161,7 @@ export function Hero() {
                   >
                     <motion.path
                       d="M2 8 Q 50 2 100 6 T 198 5"
-                      stroke="#C1632D"
+                      stroke="#E03B25"
                       strokeWidth="3"
                       strokeLinecap="round"
                       fill="none"
@@ -183,7 +183,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.8, delay: 0.7, ease: [0.32, 0.72, 0, 1] }}
-          className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-[var(--color-fg-secondary)] md:text-xl"
+          className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-white/75 md:text-xl"
         >
           Hospedaje corporativo y arriendo de equipos para faenas mineras e industriales
           en el norte de Chile. Logística resuelta para que tu proyecto no se detenga.
@@ -208,7 +208,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 1.3 }}
           className="mt-20 md:mt-28"
         >
-          <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-fg-muted)]">
+          <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-white/55">
             Operamos para mineras y EPC del norte
           </p>
           <div className="relative">
@@ -216,14 +216,14 @@ export function Hero() {
               {trustLogos.map((l) => (
                 <span
                   key={l}
-                  className="font-display text-xl md:text-2xl text-[var(--color-fg-muted)]/70 grayscale hover:text-[var(--color-fg-secondary)] transition-colors"
+                  className="font-display text-xl md:text-2xl text-white/45 grayscale hover:text-white/80 transition-colors"
                 >
                   {l}
                 </span>
               ))}
             </Marquee>
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[var(--color-bg-base)] to-transparent" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[var(--color-bg-base)] to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0E1A1F] to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#0E1A1F] to-transparent" />
           </div>
         </motion.div>
 
@@ -234,7 +234,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 1.6 }}
           className="mt-12 flex items-center justify-center pb-8 md:mt-16"
         >
-          <ChevronDown className="h-5 w-5 animate-bounce text-[var(--color-fg-muted)]" />
+          <ChevronDown className="h-5 w-5 animate-bounce text-white/55" />
         </motion.div>
       </div>
     </section>

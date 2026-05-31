@@ -18,7 +18,7 @@ export function StatsBar() {
               <div className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--color-fg-muted)]">
                 {String(i + 1).padStart(2, "0")} / {stats.length}
               </div>
-              <div className="mt-3 flex items-baseline gap-1 font-display text-5xl font-black tracking-tight text-[var(--color-gold)] md:text-6xl">
+              <div className="mt-3 flex items-baseline gap-1 font-display text-5xl font-black tracking-tight text-[var(--color-brand-primary)] md:text-6xl">
                 <NumberTicker value={s.value} />
                 <span>{s.suffix}</span>
               </div>

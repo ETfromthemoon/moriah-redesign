@@ -2,33 +2,36 @@
   "$schema": "https://design-tokens.org/schema.json",
   "color": {
     "bg": {
-      "base": { "value": "#0A0A0A" },
-      "surface": { "value": "#141414" },
-      "elevated": { "value": "#1F1F1F" },
-      "inverse": { "value": "#F5F1EA" }
+      "base": { "value": "#FAFAF6" },
+      "surface": { "value": "#FFFFFF" },
+      "elevated": { "value": "#F1EFE8" },
+      "dark": { "value": "#0E1A1F" },
+      "inverse": { "value": "#0E1A1F" }
     },
     "fg": {
-      "primary": { "value": "#F5F1EA" },
-      "secondary": { "value": "#A8A29E" },
-      "muted": { "value": "#6B6660" },
-      "inverse": { "value": "#0A0A0A" }
+      "primary": { "value": "#0E1A1F" },
+      "secondary": { "value": "#4A5560" },
+      "muted": { "value": "#8A8F94" },
+      "inverse": { "value": "#FAFAF6" }
     },
     "brand": {
-      "copper": { "value": "#C1632D" },
-      "copper-hover": { "value": "#D17636" },
-      "copper-soft": { "value": "rgba(193, 99, 45, 0.15)" },
-      "gold": { "value": "#E8B873" },
-      "gold-soft": { "value": "rgba(232, 184, 115, 0.12)" }
+      "primary": { "value": "#1E6E94" },
+      "primary-hover": { "value": "#265C7A" },
+      "primary-soft": { "value": "rgba(30, 110, 148, 0.10)" },
+      "accent": { "value": "#E03B25" },
+      "accent-hover": { "value": "#C2311E" },
+      "accent-soft": { "value": "rgba(224, 59, 37, 0.08)" },
+      "success": { "value": "#3CAC4A" }
     },
     "border": {
-      "subtle": { "value": "#2A2A2A" },
-      "default": { "value": "#3A3A3A" },
-      "strong": { "value": "#525252" }
+      "subtle": { "value": "#E6E3DA" },
+      "default": { "value": "#D4D0C5" },
+      "strong": { "value": "#A8A29C" }
     },
     "feedback": {
-      "success": { "value": "#4A7C59" },
-      "warning": { "value": "#D17636" },
-      "error": { "value": "#A8453A" }
+      "success": { "value": "#3CAC4A" },
+      "warning": { "value": "#E0A23B" },
+      "error": { "value": "#E03B25" }
     }
   },
   "font": {
@@ -108,10 +111,10 @@
     }
   },
   "shadow": {
-    "sm": { "value": "0 1px 2px rgba(0,0,0,0.4)" },
-    "base": { "value": "0 4px 12px rgba(0,0,0,0.5)" },
-    "lg": { "value": "0 12px 32px rgba(0,0,0,0.6)" },
-    "copper-glow": { "value": "0 0 32px rgba(193, 99, 45, 0.4)" },
-    "gold-glow": { "value": "0 0 24px rgba(232, 184, 115, 0.3)" }
+    "sm": { "value": "0 1px 2px rgba(14, 26, 31, 0.06)" },
+    "base": { "value": "0 4px 12px rgba(14, 26, 31, 0.08)" },
+    "lg": { "value": "0 12px 32px rgba(14, 26, 31, 0.12)" },
+    "brand-glow": { "value": "0 0 32px rgba(30, 110, 148, 0.25)" },
+    "accent-glow": { "value": "0 0 24px rgba(224, 59, 37, 0.20)" }
   }
 }

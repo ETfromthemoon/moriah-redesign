@@ -102,13 +102,13 @@ export function DualOffering() {
                     )}
                     style={{
                       background:
-                        "radial-gradient(ellipse 80% 40% at 70% 0%, rgba(193,99,45,0.18), transparent)",
+                        "radial-gradient(ellipse 80% 40% at 70% 0%, rgba(30,110,148,0.12), transparent)",
                     }}
                   />
 
                   <div className="relative flex items-center gap-3">
-                    <div className="grid h-12 w-12 place-items-center rounded-lg border border-[var(--color-border-default)] bg-[var(--color-bg-base)]">
-                      <Icon className="h-5 w-5 text-[var(--color-copper)]" strokeWidth={1.5} />
+                    <div className="grid h-12 w-12 place-items-center rounded-lg border border-[var(--color-border-default)] bg-[var(--color-bg-elevated)]">
+                      <Icon className="h-5 w-5 text-[var(--color-brand-primary)]" strokeWidth={1.5} />
                     </div>
                     <span className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-fg-muted)]">
                       {o.eyebrow}
@@ -123,7 +123,7 @@ export function DualOffering() {
                     {o.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-3 text-[var(--color-fg-secondary)]">
                         <Check
-                          className="mt-1 h-4 w-4 shrink-0 text-[var(--color-gold)]"
+                          className="mt-1 h-4 w-4 shrink-0 text-[var(--color-brand-success)]"
                           strokeWidth={2}
                         />
                         <span>{b}</span>

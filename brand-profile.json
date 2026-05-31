@@ -40,7 +40,7 @@
     ]
   },
   "visual_direction": {
-    "mood": "Industrial premium oscuro con calor cobre",
+    "mood": "Editorial premium claro con acentos del logo institucional (azul petróleo, rojo, verde)",
     "references": [
       "Patagonia Provisions (rugged premium)",
       "Lemaire (editorial restraint)",
@@ -62,54 +62,69 @@
   },
   "color_palette": {
     "primary_bg": {
-      "hex": "#0A0A0A",
-      "name": "Antracita",
-      "usage": "Fondo principal, secciones hero"
+      "hex": "#FAFAF6",
+      "name": "Sal del Salar",
+      "usage": "Fondo principal claro del sitio"
     },
     "surface": {
-      "hex": "#141414",
-      "name": "Carbón",
-      "usage": "Cards, surfaces elevadas"
+      "hex": "#FFFFFF",
+      "name": "Blanco Atacama",
+      "usage": "Cards, formularios, surfaces contrastadas"
     },
     "surface_elevated": {
-      "hex": "#1F1F1F",
-      "name": "Pizarra",
-      "usage": "Modales, dropdowns, hover states"
+      "hex": "#F1EFE8",
+      "name": "Arena Clara",
+      "usage": "Hover, dropdowns, surfaces elevadas"
+    },
+    "surface_dark": {
+      "hex": "#0E1A1F",
+      "name": "Noche Minera",
+      "usage": "Hero overlay, CTA final, Footer (contraste fuerte)"
     },
     "accent_primary": {
-      "hex": "#C1632D",
-      "name": "Cobre Calama",
-      "usage": "CTAs, hovers, highlights, marker text"
+      "hex": "#1E6E94",
+      "name": "Azul Moriah",
+      "usage": "CTAs principales, links, focus, eyebrows, stats numbers"
     },
     "accent_secondary": {
-      "hex": "#E8B873",
-      "name": "Oro Atacama",
-      "usage": "Stats numbers, accent text, hover glow"
+      "hex": "#E03B25",
+      "name": "Rojo Salar",
+      "usage": "Highlights, marker text, badges puntuales"
+    },
+    "accent_success": {
+      "hex": "#3CAC4A",
+      "name": "Verde Pampa",
+      "usage": "Iconos check, badges 'disponible', confirmaciones"
     },
     "text_primary": {
-      "hex": "#F5F1EA",
-      "name": "Sal del salar",
-      "usage": "Body text sobre dark"
+      "hex": "#0E1A1F",
+      "name": "Roca Negra",
+      "usage": "Headlines, body sobre fondo claro"
     },
     "text_secondary": {
-      "hex": "#A8A29E",
-      "name": "Polvo",
-      "usage": "Captions, metadata"
+      "hex": "#4A5560",
+      "name": "Pizarra",
+      "usage": "Body secundario, párrafos"
     },
     "text_muted": {
-      "hex": "#6B6660",
+      "hex": "#8A8F94",
       "name": "Niebla",
-      "usage": "Disabled, low priority"
+      "usage": "Captions, metadata, low priority"
+    },
+    "text_inverse": {
+      "hex": "#FAFAF6",
+      "name": "Sal Inverso",
+      "usage": "Texto sobre superficies dark (Hero, Footer)"
     },
     "border": {
-      "hex": "#2A2A2A",
-      "name": "Hierro",
-      "usage": "Divisiones, bordes sutiles"
+      "hex": "#E6E3DA",
+      "name": "Arena",
+      "usage": "Divisiones sutiles, bordes de cards"
     },
-    "success": {
-      "hex": "#4A7C59",
-      "name": "Verde faena",
-      "usage": "Confirmaciones, available"
+    "border_default": {
+      "hex": "#D4D0C5",
+      "name": "Arena Media",
+      "usage": "Inputs, botones outline"
     }
   },
   "typography": {

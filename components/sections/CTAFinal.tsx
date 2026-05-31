@@ -23,25 +23,25 @@ export function CTAFinal() {
   return (
     <section
       id="contacto"
-      className="relative overflow-hidden border-t border-[var(--color-border-subtle)] py-24 md:py-32"
+      className="relative overflow-hidden border-t border-white/5 bg-[var(--color-bg-dark)] py-24 text-white md:py-32"
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 aurora-bg opacity-50 mix-blend-soft-light"
+        className="pointer-events-none absolute inset-0 aurora-bg-dark opacity-70 mix-blend-soft-light"
       />
 
       <div className="relative mx-auto grid max-w-7xl gap-16 px-4 md:grid-cols-[1fr_1.1fr] md:gap-12 md:px-8">
         {/* Left — Copy & contact alternatives */}
         <div>
           <BlurFade>
-            <div className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-copper)]">
+            <div className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[#5BB3D9]">
               07 — Cotización
             </div>
             <h2 className="font-display text-4xl font-black leading-[1.02] tracking-tight md:text-6xl">
               Tu próximo proyecto en el norte empieza con{" "}
-              <span className="text-gradient-copper">una llamada.</span>
+              <span className="text-gradient-on-dark">una llamada.</span>
             </h2>
-            <p className="mt-6 max-w-md text-lg leading-relaxed text-[var(--color-fg-secondary)]">
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-white/70">
               Cuéntanos qué necesitas. Dimensionamos contigo en 24 horas y te enviamos
               propuesta operativa con SLA por escrito.
             </p>
@@ -54,13 +54,13 @@ export function CTAFinal() {
                   href="https://wa.me/56995412163"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 text-[var(--color-fg-primary)] transition-colors hover:text-[var(--color-copper)]"
+                  className="group flex items-center gap-4 text-white transition-colors hover:text-[#5BB3D9]"
                 >
-                  <span className="grid h-11 w-11 place-items-center rounded-md border border-[var(--color-border-default)] bg-[var(--color-bg-surface)] transition-colors group-hover:border-[var(--color-copper)]">
+                  <span className="grid h-11 w-11 place-items-center rounded-md border border-white/15 bg-white/5 transition-colors group-hover:border-[#5BB3D9]">
                     <MessageCircle className="h-4 w-4" strokeWidth={1.5} />
                   </span>
                   <div>
-                    <div className="text-xs uppercase tracking-wider text-[var(--color-fg-muted)]">
+                    <div className="text-xs uppercase tracking-wider text-white/55">
                       WhatsApp directo
                     </div>
                     <div className="font-mono">+56 9 9541 2163</div>
@@ -70,13 +70,13 @@ export function CTAFinal() {
               <li>
                 <a
                   href="tel:+56995412163"
-                  className="group flex items-center gap-4 text-[var(--color-fg-primary)] transition-colors hover:text-[var(--color-copper)]"
+                  className="group flex items-center gap-4 text-white transition-colors hover:text-[#5BB3D9]"
                 >
-                  <span className="grid h-11 w-11 place-items-center rounded-md border border-[var(--color-border-default)] bg-[var(--color-bg-surface)] transition-colors group-hover:border-[var(--color-copper)]">
+                  <span className="grid h-11 w-11 place-items-center rounded-md border border-white/15 bg-white/5 transition-colors group-hover:border-[#5BB3D9]">
                     <Phone className="h-4 w-4" strokeWidth={1.5} />
                   </span>
                   <div>
-                    <div className="text-xs uppercase tracking-wider text-[var(--color-fg-muted)]">
+                    <div className="text-xs uppercase tracking-wider text-white/55">
                       Llamar ahora
                     </div>
                     <div className="font-mono">+56 9 9541 2163</div>
@@ -86,13 +86,13 @@ export function CTAFinal() {
               <li>
                 <a
                   href="mailto:contacto@moriah.cl"
-                  className="group flex items-center gap-4 text-[var(--color-fg-primary)] transition-colors hover:text-[var(--color-copper)]"
+                  className="group flex items-center gap-4 text-white transition-colors hover:text-[#5BB3D9]"
                 >
-                  <span className="grid h-11 w-11 place-items-center rounded-md border border-[var(--color-border-default)] bg-[var(--color-bg-surface)] transition-colors group-hover:border-[var(--color-copper)]">
+                  <span className="grid h-11 w-11 place-items-center rounded-md border border-white/15 bg-white/5 transition-colors group-hover:border-[#5BB3D9]">
                     <Mail className="h-4 w-4" strokeWidth={1.5} />
                   </span>
                   <div>
-                    <div className="text-xs uppercase tracking-wider text-[var(--color-fg-muted)]">
+                    <div className="text-xs uppercase tracking-wider text-white/55">
                       Email corporativo
                     </div>
                     <div>contacto@moriah.cl</div>
@@ -104,13 +104,13 @@ export function CTAFinal() {
                   href="https://maps.google.com/?q=Calama+Chile"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 text-[var(--color-fg-primary)] transition-colors hover:text-[var(--color-copper)]"
+                  className="group flex items-center gap-4 text-white transition-colors hover:text-[#5BB3D9]"
                 >
-                  <span className="grid h-11 w-11 place-items-center rounded-md border border-[var(--color-border-default)] bg-[var(--color-bg-surface)] transition-colors group-hover:border-[var(--color-copper)]">
+                  <span className="grid h-11 w-11 place-items-center rounded-md border border-white/15 bg-white/5 transition-colors group-hover:border-[#5BB3D9]">
                     <MapPin className="h-4 w-4" strokeWidth={1.5} />
                   </span>
                   <div>
-                    <div className="text-xs uppercase tracking-wider text-[var(--color-fg-muted)]">
+                    <div className="text-xs uppercase tracking-wider text-white/55">
                       Oficina
                     </div>
                     <div>Calama, Región de Antofagasta</div>
@@ -123,7 +123,7 @@ export function CTAFinal() {
 
         {/* Right — Form */}
         <BlurFade delay={0.1}>
-          <div className="relative overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] bg-[var(--color-bg-surface)] p-6 md:p-10">
+          <div className="relative overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] bg-[var(--color-bg-surface)] p-6 text-[var(--color-fg-primary)] shadow-[0_24px_60px_rgba(0,0,0,0.35)] md:p-10">
             <BorderBeam duration={14} size={260} />
 
             {sent ? (
@@ -174,7 +174,7 @@ export function CTAFinal() {
                         }
                         className={`rounded-full border px-4 py-2 text-sm capitalize transition-all ${
                           services[k]
-                            ? "border-[var(--color-copper)] bg-[var(--color-copper)]/15 text-[var(--color-copper-hover)]"
+                            ? "border-[var(--color-brand-primary)] bg-[var(--color-brand-primary-soft)] text-[var(--color-brand-primary-hover)]"
                             : "border-[var(--color-border-default)] text-[var(--color-fg-secondary)] hover:border-[var(--color-border-strong)]"
                         }`}
                       >

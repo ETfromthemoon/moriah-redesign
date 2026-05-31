@@ -29,7 +29,7 @@ export function Navbar() {
       className={cn(
         "fixed top-0 z-50 w-full transition-all duration-500",
         scrolled
-          ? "border-b border-[var(--color-border-subtle)] bg-[var(--color-bg-base)]/70 backdrop-blur-xl"
+          ? "border-b border-[var(--color-border-subtle)] bg-[var(--color-bg-base)]/85 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       )}
     >
@@ -41,7 +41,10 @@ export function Navbar() {
             width={140}
             height={36}
             priority
-            className="h-9 w-auto object-contain"
+            className={cn(
+              "h-9 w-auto object-contain transition-[filter] duration-500",
+              scrolled ? "" : "brightness-0 invert"
+            )}
           />
         </Link>
 
@@ -50,7 +53,12 @@ export function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm text-[var(--color-fg-secondary)] hover:text-[var(--color-fg-primary)] transition-colors"
+              className={cn(
+                "text-sm transition-colors",
+                scrolled
+                  ? "text-[var(--color-fg-secondary)] hover:text-[var(--color-fg-primary)]"
+                  : "text-white/80 hover:text-white"
+              )}
             >
               {l.label}
             </Link>
@@ -63,7 +71,12 @@ export function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
-            className="grid h-10 w-10 place-items-center rounded-full border border-[var(--color-border-default)] text-[var(--color-fg-secondary)] hover:border-[var(--color-copper)] hover:text-[var(--color-copper-hover)] transition-colors"
+            className={cn(
+              "grid h-10 w-10 place-items-center rounded-full border transition-colors",
+              scrolled
+                ? "border-[var(--color-border-default)] text-[var(--color-fg-secondary)] hover:border-[var(--color-brand-primary)] hover:text-[var(--color-brand-primary)]"
+                : "border-white/30 text-white/85 hover:border-white hover:text-white"
+            )}
           >
             <MessageCircle className="h-4 w-4" />
           </a>
@@ -74,7 +87,12 @@ export function Navbar() {
 
         <button
           onClick={() => setOpen((o) => !o)}
-          className="grid h-10 w-10 place-items-center rounded-md border border-[var(--color-border-default)] md:hidden"
+          className={cn(
+            "grid h-10 w-10 place-items-center rounded-md border md:hidden",
+            scrolled
+              ? "border-[var(--color-border-default)] text-[var(--color-fg-primary)]"
+              : "border-white/30 text-white"
+          )}
           aria-label="Menú"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -89,7 +107,7 @@ export function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-3 text-base text-[var(--color-fg-primary)] hover:bg-[var(--color-bg-surface)]"
+                className="rounded-md px-3 py-3 text-base text-[var(--color-fg-primary)] hover:bg-[var(--color-bg-elevated)]"
               >
                 {l.label}
               </a>

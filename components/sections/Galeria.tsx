@@ -83,7 +83,7 @@ export function Galeria() {
                   <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/85 md:text-xs">
                     {it.label}
                   </span>
-                  <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-copper)] shadow-[0_0_12px_rgba(193,99,45,0.8)]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-brand-accent)] shadow-[0_0_12px_rgba(224,59,37,0.7)]" />
                 </figcaption>
               </figure>
             </BlurFade>

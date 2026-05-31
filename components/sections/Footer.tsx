@@ -38,14 +38,14 @@ const cols = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-[var(--color-border-subtle)] bg-[var(--color-bg-base)]">
-      {/* Aurora gradient inferior cobre */}
+    <footer className="relative overflow-hidden border-t border-white/5 bg-[var(--color-bg-dark)] text-white">
+      {/* Aurora gradient inferior brand */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-48 opacity-40"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-48 opacity-50"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 50% 120%, rgba(193,99,45,0.45), transparent 60%)",
+            "radial-gradient(ellipse 80% 60% at 50% 120%, rgba(30,110,148,0.55), transparent 60%)",
         }}
       />
 
@@ -53,11 +53,11 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.5fr_repeat(4,_1fr)]">
           <div>
             <Link href="#top" className="inline-block">
-              <span className="font-display text-3xl tracking-tight">
-                Moriah<span className="text-[var(--color-copper)]">.</span>
+              <span className="font-display text-3xl tracking-tight text-white">
+                Moriah<span className="text-[#E03B25]">.</span>
               </span>
             </Link>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-[var(--color-fg-secondary)]">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/65">
               Hospedaje y equipos para la operación minera del norte. Calama, Chile.
             </p>
             <div className="mt-6 flex gap-2">
@@ -70,7 +70,7 @@ export function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="grid h-10 w-10 place-items-center rounded-md border border-[var(--color-border-subtle)] text-[var(--color-fg-secondary)] transition-colors hover:border-[var(--color-copper)] hover:text-[var(--color-copper-hover)]"
+                  className="grid h-10 w-10 place-items-center rounded-md border border-white/15 text-white/70 transition-colors hover:border-white/40 hover:text-white"
                 >
                   <Icon className="h-4 w-4" strokeWidth={1.5} />
                 </a>
@@ -80,7 +80,7 @@ export function Footer() {
 
           {cols.map((c) => (
             <div key={c.title}>
-              <div className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--color-fg-muted)]">
+              <div className="font-mono text-xs uppercase tracking-[0.18em] text-white/50">
                 {c.title}
               </div>
               <ul className="mt-5 space-y-3">
@@ -88,7 +88,7 @@ export function Footer() {
                   <li key={it.label}>
                     <a
                       href={it.href}
-                      className="text-sm text-[var(--color-fg-secondary)] transition-colors hover:text-[var(--color-fg-primary)]"
+                      className="text-sm text-white/70 transition-colors hover:text-white"
                     >
                       {it.label}
                     </a>
@@ -99,7 +99,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-[var(--color-border-subtle)] pt-8 text-xs text-[var(--color-fg-muted)] md:flex-row md:items-center">
+        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/50 md:flex-row md:items-center">
           <div>© {new Date().getFullYear()} Moriah SPA · Calama, Chile.</div>
           <div className="font-mono uppercase tracking-wider">
             Operación 24/7 · Norte de Chile

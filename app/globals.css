@@ -1,32 +1,49 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-base: #0A0A0A;
-  --color-bg-surface: #141414;
-  --color-bg-elevated: #1F1F1F;
-  --color-bg-inverse: #F5F1EA;
+  /* Backgrounds — light editorial */
+  --color-bg-base: #FAFAF6;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-elevated: #F1EFE8;
+  --color-bg-dark: #0E1A1F;
+  --color-bg-inverse: #0E1A1F;
 
-  --color-fg-primary: #F5F1EA;
-  --color-fg-secondary: #A8A29E;
-  --color-fg-muted: #6B6660;
-  --color-fg-inverse: #0A0A0A;
+  /* Foreground */
+  --color-fg-primary: #0E1A1F;
+  --color-fg-secondary: #4A5560;
+  --color-fg-muted: #8A8F94;
+  --color-fg-inverse: #FAFAF6;
 
-  --color-copper: #C1632D;
-  --color-copper-hover: #D17636;
-  --color-gold: #E8B873;
+  /* Brand — colores institucionales del logo Moriah */
+  --color-brand-primary: #1E6E94;        /* azul petróleo del logo */
+  --color-brand-primary-hover: #265C7A;
+  --color-brand-primary-soft: rgba(30, 110, 148, 0.10);
+  --color-brand-accent: #E03B25;         /* rojo del logo */
+  --color-brand-accent-hover: #C2311E;
+  --color-brand-accent-soft: rgba(224, 59, 37, 0.08);
+  --color-brand-success: #3CAC4A;        /* verde del logo */
 
-  --color-border-subtle: #2A2A2A;
-  --color-border-default: #3A3A3A;
-  --color-border-strong: #525252;
+  /* Legacy aliases — mapean a la nueva paleta para no romper componentes */
+  --color-copper: #1E6E94;               /* antes cobre → ahora azul brand */
+  --color-copper-hover: #265C7A;
+  --color-gold: #1E6E94;                 /* stats numbers en azul */
 
-  --color-success: #4A7C59;
-  --color-warning: #D17636;
-  --color-error: #A8453A;
+  /* Borders */
+  --color-border-subtle: #E6E3DA;
+  --color-border-default: #D4D0C5;
+  --color-border-strong: #A8A29C;
 
+  /* Feedback */
+  --color-success: #3CAC4A;
+  --color-warning: #E0A23B;
+  --color-error: #E03B25;
+
+  /* Type */
   --font-display: var(--font-fraunces), Georgia, serif;
   --font-sans: var(--font-inter-tight), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
 
+  /* Motion */
   --ease-default: cubic-bezier(0.32, 0.72, 0, 1);
   --ease-smooth: cubic-bezier(0.65, 0, 0.35, 1);
   --ease-snappy: cubic-bezier(0.5, 1.5, 0.5, 1);
@@ -35,6 +52,12 @@
   --animate-marquee: marquee 40s linear infinite;
   --animate-pulse-slow: pulse-slow 2.5s ease-in-out infinite;
   --animate-shimmer: shimmer 3s linear infinite;
+
+  /* Shadows — suaves, no dark */
+  --shadow-sm: 0 1px 2px rgba(14, 26, 31, 0.06);
+  --shadow-base: 0 4px 12px rgba(14, 26, 31, 0.08);
+  --shadow-lg: 0 12px 32px rgba(14, 26, 31, 0.12);
+  --shadow-brand-glow: 0 0 32px rgba(30, 110, 148, 0.25);
 
   @keyframes aurora {
     0% { background-position: 0% 50%; }
@@ -53,8 +76,8 @@
   }
 
   @keyframes pulse-slow {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(193, 99, 45, 0.5); }
-    50% { box-shadow: 0 0 0 16px rgba(193, 99, 45, 0); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(30, 110, 148, 0.45); }
+    50% { box-shadow: 0 0 0 16px rgba(30, 110, 148, 0); }
   }
 
   @keyframes shimmer {
@@ -68,16 +91,16 @@
 }
 
 :root {
-  color-scheme: dark;
-  --background: #0A0A0A;
-  --foreground: #F5F1EA;
+  color-scheme: light;
+  --background: #FAFAF6;
+  --foreground: #0E1A1F;
 }
 
 * { border-color: var(--color-border-subtle); }
 
 html, body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-bg-base);
+  color: var(--color-fg-primary);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -85,8 +108,8 @@ html, body {
 }
 
 ::selection {
-  background: var(--color-copper);
-  color: var(--color-fg-primary);
+  background: var(--color-brand-primary);
+  color: #FFFFFF;
 }
 
 .font-display { font-family: var(--font-display); font-feature-settings: "ss01", "ss02"; }
@@ -104,17 +127,47 @@ html, body {
   }
 }
 
-/* Aurora gradient utility */
+/* Aurora gradient utility — versión clara con tintes brand */
 .aurora-bg {
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(193, 99, 45, 0.25), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(232, 184, 115, 0.15), transparent);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(30, 110, 148, 0.18), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(224, 59, 37, 0.10), transparent);
   background-size: 200% 200%;
   animation: var(--animate-aurora);
 }
 
+/* Aurora dark — para secciones de contraste (Hero overlay, CTA final, Footer) */
+.aurora-bg-dark {
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(30, 110, 148, 0.35), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(224, 59, 37, 0.20), transparent);
+  background-size: 200% 200%;
+  animation: var(--animate-aurora);
+}
+
+/* Gradient brand — antes "copper", ahora azul→rojo del logo */
+/* Gradient brand sobre fondo claro */
 .text-gradient-copper {
-  background: linear-gradient(135deg, #E8B873 0%, #C1632D 50%, #E8B873 100%);
+  background: linear-gradient(135deg, #1E6E94 0%, #E03B25 50%, #1E6E94 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+/* Gradient brand sobre fondo dark (Hero) — tonos más claros para contraste */
+.text-gradient-on-dark {
+  background: linear-gradient(135deg, #5BB3D9 0%, #FF6A56 50%, #5BB3D9 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+.text-gradient-brand {
+  background: linear-gradient(135deg, #1E6E94 0%, #E03B25 50%, #1E6E94 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
