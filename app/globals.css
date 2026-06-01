@@ -98,8 +98,14 @@
     100% { transform: translateY(8px); opacity: 0; }
   }
 
+  @keyframes light-sweep {
+    0%, 100% { transform: translateX(-6%) rotate(9deg); opacity: 0.30; }
+    50%      { transform: translateX(6%) rotate(9deg); opacity: 0.55; }
+  }
+
   --animate-ken-burns: ken-burns 8s ease-out forwards;
   --animate-mouse-scroll: mouse-scroll 1.2s ease-in-out infinite;
+  --animate-light-sweep: light-sweep 16s ease-in-out infinite;
 }
 
 :root {
@@ -172,6 +178,16 @@ html, body {
 
 .animate-ken-burns { animation: var(--animate-ken-burns); }
 .animate-mouse-scroll { animation: var(--animate-mouse-scroll); }
+.animate-light-sweep { animation: var(--animate-light-sweep); will-change: transform, opacity; }
+
+/* Hero dawn: petrol sky bleeding into desert ember at the horizon */
+.hero-dawn {
+  background-image:
+    radial-gradient(120% 80% at 50% -10%, rgba(45, 74, 92, 0.55), transparent 60%),
+    radial-gradient(90% 60% at 50% 118%, rgba(255, 122, 60, 0.40), transparent 62%),
+    radial-gradient(70% 45% at 78% 112%, rgba(224, 59, 37, 0.30), transparent 60%),
+    linear-gradient(180deg, #0B151A 0%, #0E1A1F 46%, #14110E 100%);
+}
 
 /* Glassmorphism utility */
 .glass-dark {

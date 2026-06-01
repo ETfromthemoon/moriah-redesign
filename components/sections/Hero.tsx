@@ -88,6 +88,9 @@ export function Hero() {
       onMouseMove={onMouseMove}
       className="relative isolate min-h-[100dvh] overflow-hidden bg-[#0E1A1F] pt-28 text-white md:pt-32"
     >
+      {/* Dawn atmosphere base: petrol sky into desert ember */}
+      <div aria-hidden className="absolute inset-0 -z-30 hero-dawn" />
+
       {/* Background photo with parallax + Ken Burns */}
       <motion.div
         aria-hidden
@@ -100,19 +103,24 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center animate-ken-burns saturate-[0.85] brightness-[0.55]"
+          className="object-cover object-center animate-ken-burns saturate-[0.78] brightness-[0.42] contrast-[1.05]"
         />
       </motion.div>
 
-      {/* Dark overlay for legibility */}
+      {/* Ember bloom rising from the horizon */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0E1A1F]/70 via-[#0E1A1F]/80 to-[#0E1A1F]"
+        className="absolute inset-x-0 bottom-0 -z-10 h-[55%] bg-[radial-gradient(80%_120%_at_50%_120%,rgba(255,122,60,0.28),transparent_70%)] mix-blend-screen"
       />
-      {/* Aurora background */}
+      {/* Legibility overlay, warm at the base */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 aurora-bg opacity-60 mix-blend-soft-light"
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0B151A]/65 via-[#0E1A1F]/72 to-[#14110E]/92"
+      />
+      {/* Volumetric light shaft, slow drift */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-1/4 left-1/2 -z-10 h-[150%] w-[55%] -translate-x-1/2 animate-light-sweep bg-[linear-gradient(180deg,rgba(255,196,140,0.22),rgba(255,122,60,0.06)_45%,transparent_75%)] blur-3xl mix-blend-screen"
       />
       {/* Mouse spotlight */}
       <div
@@ -158,46 +166,54 @@ export function Hero() {
         </motion.div>
 
         <h1 className="font-display text-balance text-[clamp(3rem,8.5vw,8rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">
-          {headlineWords.map((w, i) => (
-            <motion.span
-              key={i}
-              initial={{ opacity: 0, filter: "blur(20px)", y: 12 }}
-              animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-              transition={{
-                duration: 0.9,
-                delay: 0.2 + i * 0.08,
-                ease: [0.32, 0.72, 0, 1],
-              }}
-              className="inline-block"
-            >
-              {i === headlineWords.length - 1 ? (
-                <span className="relative inline-block">
-                  <span className="text-brand-highlight-dark">{w}</span>
-                  {/* hand-drawn marker underline */}
-                  <svg
-                    aria-hidden
-                    className="absolute -bottom-2 left-0 h-3 w-full"
-                    viewBox="0 0 200 12"
-                    preserveAspectRatio="none"
-                  >
-                    <motion.path
-                      d="M2 8 Q 50 2 100 6 T 198 5"
-                      stroke="#E03B25"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      fill="none"
-                      initial={{ pathLength: 0 }}
-                      animate={{ pathLength: 1 }}
-                      transition={{ duration: 1, delay: 1.1, ease: "easeInOut" }}
-                    />
-                  </svg>
-                </span>
-              ) : (
-                w
-              )}
-              {i < headlineWords.length - 1 && " "}
-            </motion.span>
-          ))}
+          {headlineWords.map((w, i) => {
+            const isLast = i === headlineWords.length - 1;
+            return (
+              <span key={i}>
+              <span
+                className="inline-block overflow-hidden pb-[0.12em] -mb-[0.12em] align-bottom"
+              >
+                <motion.span
+                  initial={{ y: "118%" }}
+                  animate={{ y: "0%" }}
+                  transition={{
+                    duration: 0.95,
+                    delay: 0.25 + i * 0.11,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                  className="inline-block"
+                >
+                  {isLast ? (
+                    <span className="relative inline-block">
+                      <span className="text-brand-highlight-dark">{w}</span>
+                      {/* hand-drawn marker underline */}
+                      <svg
+                        aria-hidden
+                        className="absolute -bottom-1 left-0 h-3 w-full"
+                        viewBox="0 0 200 12"
+                        preserveAspectRatio="none"
+                      >
+                        <motion.path
+                          d="M2 8 Q 50 2 100 6 T 198 5"
+                          stroke="#FF7A3C"
+                          strokeWidth="3"
+                          strokeLinecap="round"
+                          fill="none"
+                          initial={{ pathLength: 0 }}
+                          animate={{ pathLength: 1 }}
+                          transition={{ duration: 1, delay: 1.3, ease: "easeInOut" }}
+                        />
+                      </svg>
+                    </span>
+                  ) : (
+                    w
+                  )}
+                </motion.span>
+              </span>
+              {!isLast && " "}
+              </span>
+            );
+          })}
         </h1>
 
         <motion.p

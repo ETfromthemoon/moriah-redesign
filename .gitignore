@@ -14,3 +14,6 @@ tsconfig.tsbuildinfo
 
 # Impeccable critique snapshots
 .impeccable/
+
+# Preview tooling
+.claude/launch.json
