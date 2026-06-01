@@ -38,9 +38,9 @@
   --color-warning: #E0A23B;
   --color-error: #E03B25;
 
-  /* Type */
-  --font-display: var(--font-playfair), Georgia, serif;
-  --font-sans: var(--font-inter-tight), system-ui, sans-serif;
+  /* Type — one industrial grotesque superfamily + technical mono */
+  --font-display: var(--font-archivo), system-ui, sans-serif;
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
 
   /* Motion */
@@ -130,8 +130,15 @@ html, body {
   color: #FFFFFF;
 }
 
-.font-display { font-family: var(--font-display); }
-.font-mono { font-family: var(--font-mono); }
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  font-feature-settings: "ss01", "cv01";
+}
+.font-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum" 1, "zero" 1; /* tabular + slashed zero */
+}
 
 .text-balance { text-wrap: balance; }
 .text-pretty { text-wrap: pretty; }

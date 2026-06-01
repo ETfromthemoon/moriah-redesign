@@ -53,7 +53,7 @@ export function Metodo() {
           fill
           sizes="100vw"
           priority={false}
-          className="object-cover object-center"
+          className="object-cover object-center saturate-[0.82] contrast-[1.08]"
         />
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-[#0E1A1F]/85" />

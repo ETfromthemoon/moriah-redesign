@@ -103,7 +103,7 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center animate-ken-burns saturate-[0.78] brightness-[0.42] contrast-[1.05]"
+          className="object-cover object-center animate-ken-burns saturate-[0.82] brightness-[0.42] contrast-[1.08]"
         />
       </motion.div>
 

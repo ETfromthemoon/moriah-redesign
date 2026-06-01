@@ -1,20 +1,16 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter_Tight, JetBrains_Mono } from "next/font/google";
+import { Archivo, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { MotionProvider } from "@/components/providers/MotionProvider";
 
-const playfairDisplay = Playfair_Display({
+// Single industrial grotesque superfamily: display in heavy weights,
+// body in regular/medium. Engineered character, not editorial serif.
+const archivo = Archivo({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-archivo",
   display: "swap",
   weight: ["400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
-});
-
-const interTight = Inter_Tight({
-  subsets: ["latin"],
-  variable: "--font-inter-tight",
-  display: "swap",
 });
 
 const jetbrains = JetBrains_Mono({
@@ -43,7 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="es-CL"
-      className={`${playfairDisplay.variable} ${interTight.variable} ${jetbrains.variable}`}
+      className={`${archivo.variable} ${jetbrains.variable}`}
       suppressHydrationWarning
     >
       <body className="bg-[var(--color-bg-base)] text-[var(--color-fg-primary)] antialiased">

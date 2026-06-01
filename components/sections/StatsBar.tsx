@@ -21,7 +21,7 @@ export function StatsBar() {
           fill
           sizes="100vw"
           priority={false}
-          className="object-cover object-center brightness-[0.35] saturate-[0.7]"
+          className="object-cover object-center brightness-[0.35] saturate-[0.82] contrast-[1.08]"
         />
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0E1A1F]/80 via-[#0E1A1F]/60 to-[#0E1A1F]/80" />

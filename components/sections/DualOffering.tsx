@@ -80,7 +80,7 @@ export function DualOffering() {
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
               priority={false}
-              className="object-cover object-center brightness-[0.7] transition-all duration-700 ease-out group-hover:brightness-[0.85] group-hover:scale-[1.03]"
+              className="object-cover object-center brightness-[0.7] saturate-[0.82] contrast-[1.08] transition-all duration-700 ease-out group-hover:brightness-[0.85] group-hover:scale-[1.03]"
             />
 
             {/* Gradient overlay from bottom */}

@@ -55,7 +55,7 @@ export function Testimoniales() {
           fill
           sizes="100vw"
           priority={false}
-          className="object-cover object-center brightness-[0.25] saturate-[0.6]"
+          className="object-cover object-center brightness-[0.25] saturate-[0.82] contrast-[1.08]"
         />
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0E1A1F]/90 via-[#0E1A1F]/75 to-[#1E6E94]/20" />
