@@ -16,7 +16,7 @@ export function ParallaxDivider() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex min-h-[50vh] items-center justify-center overflow-hidden"
+      className="relative flex min-h-[50vh] items-center justify-center overflow-hidden bg-[var(--color-bg-dark)]"
     >
       {/* Background: Atacama night sky */}
       <motion.div

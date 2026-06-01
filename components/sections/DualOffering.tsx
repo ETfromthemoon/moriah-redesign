@@ -71,7 +71,7 @@ export function DualOffering() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: i * 0.1, ease: [0.32, 0.72, 0, 1] }}
             viewport={{ once: true, margin: "-80px" }}
-            className="group relative min-h-[70vh] overflow-hidden"
+            className="group relative min-h-[70vh] overflow-hidden bg-[#0E1A1F]"
           >
             {/* Full-cover image */}
             <Image

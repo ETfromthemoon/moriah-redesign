@@ -39,7 +39,7 @@ export function Metodo() {
     <section
       id="metodo"
       ref={sectionRef}
-      className="relative overflow-hidden py-24 text-white md:py-32"
+      className="relative overflow-hidden bg-[var(--color-bg-dark)] py-24 text-white md:py-32"
     >
       {/* Background: Atacama desert */}
       <motion.div

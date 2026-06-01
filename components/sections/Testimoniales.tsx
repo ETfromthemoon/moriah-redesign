@@ -41,7 +41,7 @@ export function Testimoniales() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden py-24 text-white md:py-32"
+      className="relative overflow-hidden bg-[var(--color-bg-dark)] py-24 text-white md:py-32"
     >
       {/* Background: industrial workers / landscape */}
       <motion.div

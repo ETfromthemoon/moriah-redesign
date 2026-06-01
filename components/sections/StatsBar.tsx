@@ -12,7 +12,7 @@ const stats = [
 
 export function StatsBar() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden bg-[var(--color-bg-dark)]">
       {/* Background image: open pit mine */}
       <div aria-hidden className="absolute inset-0 -z-10">
         <Image
