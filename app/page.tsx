@@ -2,6 +2,7 @@ import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { StatsBar } from "@/components/sections/StatsBar";
 import { DualOffering } from "@/components/sections/DualOffering";
+import { Cotizador } from "@/components/sections/Cotizador";
 import { Galeria } from "@/components/sections/Galeria";
 import { ParallaxDivider } from "@/components/sections/ParallaxDivider";
 import { Metodo } from "@/components/sections/Metodo";
@@ -21,6 +22,7 @@ export default function HomePage() {
       <Hero />
       <StatsBar />
       <DualOffering />
+      <Cotizador />
       <Galeria />
       <ParallaxDivider />
       <Metodo />

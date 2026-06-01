@@ -216,8 +216,8 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.95 }}
           className="mt-10 flex flex-col gap-3 sm:flex-row"
         >
-          <MagneticCTA primary href="#contacto">
-            Solicitar cotización
+          <MagneticCTA primary href="#cotizar">
+            Cotizar mi faena
           </MagneticCTA>
           <MagneticCTA href="#servicios">Conocer servicios</MagneticCTA>
         </motion.div>

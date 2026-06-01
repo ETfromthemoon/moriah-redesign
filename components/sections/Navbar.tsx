@@ -81,7 +81,7 @@ export function Navbar() {
             <MessageCircle className="h-4 w-4" />
           </a>
           <Button asChild>
-            <a href="#contacto">Solicitar cotización</a>
+            <a href="#cotizar">Cotizar mi faena</a>
           </Button>
         </div>
 
@@ -113,8 +113,8 @@ export function Navbar() {
               </a>
             ))}
             <Button asChild className="mt-3 w-full">
-              <a href="#contacto" onClick={() => setOpen(false)}>
-                Solicitar cotización
+              <a href="#cotizar" onClick={() => setOpen(false)}>
+                Cotizar mi faena
               </a>
             </Button>
           </div>
