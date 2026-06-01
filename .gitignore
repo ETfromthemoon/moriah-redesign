@@ -8,3 +8,9 @@ out
 next-env.d.ts
 
 .vercel
+
+# Build artifacts
+tsconfig.tsbuildinfo
+
+# Impeccable critique snapshots
+.impeccable/

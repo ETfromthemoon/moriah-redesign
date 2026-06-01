@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "¿En qué regiones operan?",
-    a: "Nuestro foco es Calama y la Región de Antofagasta. También operamos en Atacama y Tarapacá. No operamos al sur de Coquimbo — preferimos decirlo antes de cotizar.",
+    a: "Nuestro foco es Calama y la Región de Antofagasta. También operamos en Atacama y Tarapacá. No operamos al sur de Coquimbo: preferimos decirlo antes de cotizar.",
   },
   {
     q: "¿Cuál es el plazo mínimo de servicio?",
@@ -45,7 +45,7 @@ export function FAQ() {
         <BlurFade>
           <div className="mb-12">
             <div className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-copper)]">
-              06 — Preguntas
+              Preguntas
             </div>
             <h2 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight md:text-5xl">
               Lo que preguntan los gerentes antes de cotizar.

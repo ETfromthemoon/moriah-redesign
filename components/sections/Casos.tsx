@@ -78,7 +78,7 @@ export function Casos() {
           className="mb-16 max-w-2xl"
         >
           <div className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-copper)]">
-            04 — Casos
+            Casos
           </div>
           <h2 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
             Proyectos donde estuvimos.
@@ -112,7 +112,7 @@ export function Casos() {
                 <blockquote className="mt-8 border-l-2 border-[var(--color-copper)] pl-5 font-display text-lg italic text-[var(--color-fg-primary)]">
                   &ldquo;{c.quote}&rdquo;
                   <footer className="mt-3 font-sans text-sm not-italic text-[var(--color-fg-secondary)]">
-                    — {c.quoteBy}
+                    {c.quoteBy}
                   </footer>
                 </blockquote>
               </div>

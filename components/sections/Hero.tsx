@@ -86,7 +86,7 @@ export function Hero() {
       id="top"
       ref={heroRef}
       onMouseMove={onMouseMove}
-      className="relative isolate min-h-[100vh] overflow-hidden bg-[#0E1A1F] pt-28 text-white md:pt-32"
+      className="relative isolate min-h-[100dvh] overflow-hidden bg-[#0E1A1F] pt-28 text-white md:pt-32"
     >
       {/* Background photo with parallax + Ken Burns */}
       <motion.div

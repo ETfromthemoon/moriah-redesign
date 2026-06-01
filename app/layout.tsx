@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter_Tight, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { MotionProvider } from "@/components/providers/MotionProvider";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -23,12 +24,12 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Moriah SPA — Hospedaje y equipos para faenas mineras del norte de Chile",
+  title: "Moriah SPA · Hospedaje y equipos para faenas mineras del norte de Chile",
   description:
     "Operamos donde Chile produce. Hospedaje corporativo y arriendo de equipos para minería e industria pesada en Calama y la Región de Antofagasta. 18+ años, 2.400 camas, 150+ equipos.",
   metadataBase: new URL("https://moriah.cl"),
   openGraph: {
-    title: "Moriah SPA — Operamos donde Chile produce",
+    title: "Moriah SPA · Operamos donde Chile produce",
     description:
       "Hospedaje corporativo y arriendo de equipos para faenas mineras en el norte de Chile.",
     locale: "es_CL",
@@ -46,7 +47,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="bg-[var(--color-bg-base)] text-[var(--color-fg-primary)] antialiased">
-        {children}
+        <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
   );

@@ -46,7 +46,6 @@
   /* Motion */
   --ease-default: cubic-bezier(0.32, 0.72, 0, 1);
   --ease-smooth: cubic-bezier(0.65, 0, 0.35, 1);
-  --ease-snappy: cubic-bezier(0.5, 1.5, 0.5, 1);
 
   --animate-aurora: aurora 20s linear infinite;
   --animate-marquee: marquee 40s linear infinite;
@@ -158,36 +157,6 @@ html, body {
   animation: var(--animate-aurora);
 }
 
-/* Gradient brand — antes "copper", ahora azul→rojo del logo */
-/* Gradient brand sobre fondo claro */
-.text-gradient-copper {
-  background: linear-gradient(135deg, #1E6E94 0%, #E03B25 50%, #1E6E94 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 6s linear infinite;
-}
-
-/* Gradient brand sobre fondo dark (Hero) — tonos más claros para contraste */
-.text-gradient-on-dark {
-  background: linear-gradient(135deg, #5BB3D9 0%, #FF6A56 50%, #5BB3D9 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 6s linear infinite;
-}
-
-.text-gradient-brand {
-  background: linear-gradient(135deg, #1E6E94 0%, #E03B25 50%, #1E6E94 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 6s linear infinite;
-}
-
 /* Highlight corporativo — azul sólido sobre claro */
 .text-brand-highlight {
   color: var(--color-brand-primary);
@@ -210,15 +179,6 @@ html, body {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.12);
-}
-
-/* Clip-path text reveal */
-.clip-reveal {
-  clip-path: inset(0 100% 0 0);
-  transition: clip-path 0.8s cubic-bezier(0.32, 0.72, 0, 1);
-}
-.clip-reveal.revealed {
-  clip-path: inset(0 0% 0 0);
 }
 
 /* Prevent horizontal overflow from parallax */

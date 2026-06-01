@@ -61,7 +61,7 @@ export function Galeria() {
           className="mb-14 max-w-2xl"
         >
           <div className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-copper)]">
-            03 — Instalaciones
+            Instalaciones
           </div>
           <motion.h2
             initial={{ clipPath: "inset(0 100% 0 0)" }}
