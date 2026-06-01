@@ -141,10 +141,10 @@ export function Hero() {
             "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
         }}
       />
-      {/* Bottom gradient fade */}
+      {/* Bottom settle: deepens into the dark section that follows (no light band) */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-b from-transparent via-[#0E1A1F] to-[var(--color-bg-base)]"
+        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-32 bg-gradient-to-b from-transparent to-[#0E1A1F]"
       />
 
       {/* Hero content that fades as user scrolls */}
