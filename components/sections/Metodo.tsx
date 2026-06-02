@@ -48,7 +48,7 @@ export function Metodo() {
         className="absolute inset-[-60px] -z-10"
       >
         <Image
-          src="https://images.unsplash.com/photo-1539768942893-daf53e448371?w=1920&q=80&auto=format&fit=crop"
+          src="/images/equipos-faena.jpg"
           alt=""
           fill
           sizes="100vw"

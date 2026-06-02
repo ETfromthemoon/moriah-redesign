@@ -16,7 +16,7 @@ export function StatsBar() {
       {/* Background image: open pit mine */}
       <div aria-hidden className="absolute inset-0 -z-10">
         <Image
-          src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&q=80&auto=format&fit=crop"
+          src="/images/faena-mineria.jpg"
           alt=""
           fill
           sizes="100vw"
