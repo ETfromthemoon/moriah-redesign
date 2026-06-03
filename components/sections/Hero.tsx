@@ -4,23 +4,20 @@ import Image from "next/image";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
-// Image-first hero: real client photography is the protagonist.
+// Image-first hero: cinematic mining imagery sets the scale.
+// Real client photography lives below as proof (galería, casos, testimonios).
 const HERO_IMAGES = [
   {
-    src: "/images/hospedaje.jpeg",
-    alt: "Campamento corporativo Moriah en el desierto de Atacama al atardecer",
+    src: "/images/hero-faena-1.jpg",
+    alt: "Camión de extracción y excavadora operando en un rajo abierto de minería",
   },
   {
-    src: "/images/espacio-comun.png",
-    alt: "Casino y áreas comunes del campamento minero en plena operación",
+    src: "/images/hero-faena-2.jpg",
+    alt: "Vista aérea de un rajo abierto aterrazado a gran escala en el norte",
   },
   {
-    src: "/images/habitacion-1.jpg",
-    alt: "Habitación corporativa equipada para turno de faena minera",
-  },
-  {
-    src: "/images/instalaciones.jpg",
-    alt: "Instalaciones modulares de hospedaje para faena en el norte de Chile",
+    src: "/images/hero-faena-3.jpg",
+    alt: "Faena minera a gran escala al pie de la cordillera del norte de Chile",
   },
 ];
 
@@ -71,7 +68,12 @@ export function Hero() {
         {/* Soft seat so the photo reads without burying it */}
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-t from-[#0E1A1F]/55 via-transparent to-[#0E1A1F]/15 lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-[#0E1A1F]/30"
+          className="absolute inset-0 bg-gradient-to-t from-[#0E1A1F]/55 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-[#0E1A1F]/30"
+        />
+        {/* Top scrim: keeps the white navbar logo legible over light sky */}
+        <div
+          aria-hidden
+          className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#0E1A1F]/75 to-transparent"
         />
 
         {/* Image progress dots */}
