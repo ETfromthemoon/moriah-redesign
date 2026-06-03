@@ -83,8 +83,8 @@ export function DualOffering() {
               className="object-cover object-center brightness-[0.7] saturate-[0.82] contrast-[1.08] transition-all duration-700 ease-out group-hover:brightness-[0.85] group-hover:scale-[1.03]"
             />
 
-            {/* Gradient overlay from bottom */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+            {/* Gradient overlay from bottom — brand petrol for site-wide temperature cohesion */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0E1A1F]/92 via-[#0E1A1F]/45 to-transparent" />
 
             {/* Content overlay */}
             <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12">

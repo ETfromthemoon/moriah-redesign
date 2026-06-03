@@ -104,6 +104,11 @@ export function Galeria() {
                 priority={false}
                 className="object-cover saturate-[0.82] contrast-[1.08] transition-all duration-700 ease-out group-hover:scale-[1.08] group-hover:brightness-110 group-hover:saturate-100"
               />
+              {/* Unifying duotone cast: makes mixed-quality photos read as one art direction; lifts on hover */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 bg-[#0E1A1F]/25 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-0"
+              />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
               <figcaption className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-4 md:p-5">
                 <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/85 md:text-xs">
